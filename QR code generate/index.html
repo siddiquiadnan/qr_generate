@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="LO.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <title>Generate QR code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <img src="" class="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">project</a></li>
+        </ul>
+    </nav>
+
+    <!-- <div class="image1">
+        <img src="boyqr.png">
+    </div> -->
+
+    <div class="container">
+        <h1>You <span class="highlight-container"><span class="highlight"> Generate </span></span> Any Type Of QR</h1>
+        <p>You Can Generate Any Text Or Url QR. <span class="highlight-container"><span class="highlight"> Free To Usse .</span></span> And I hope You Enjoy it.</p>
+        <p><small>This QR <span class="highlight-container"><span class="highlight"> Generate for </span></span> you.</small></p>
+      </div>
+
+
+    <div class="contener">
+        <p>Enter The Text or URL</p>
+        <input type="text" placeholder="Text or URL" id="qrText">
+        <div id="imgBox">
+            <img src="" id="qrImage">
+        </div>
+        <button  onclick="GenerateQR()"> Generate QR Code </button>
+    </div>
+    <script>
+        let imgBox= document.getElementById("imgBox");
+        let qrImage= document.getElementById("qrImage");
+        let qrText= document.getElementById("qrText");
+
+        function GenerateQR() {
+            if(qrText.value.length>0){
+            
+            qrImage.src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+ qrText.value;
+            imgBox.classList.add("show-img");}
+            else{
+                qrText.classList.add('error')();
+                setTimeout(()=>{
+                    qrText.classList.remove();},1000);
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
